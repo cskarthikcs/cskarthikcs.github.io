@@ -30,28 +30,25 @@
 <h2>Biography</h2>
 
  <style>
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    img {
-width: 100px,
-  height: auto    }
-
-    .text {
-      padding-left: 27px; /* Adjust this value as needed */
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .text {
+   padding-left: 27px; /* Adjust this value as needed */
       flex: 1; /* Allow the text to take the remaining space */
             justify-content: space-between;
-    }
-
-    .image {
-      flex: 1; /* Take up half the screen width */
-      display: flex;
-      justify-content: left;
-      padding-left: 20px;
-    }
+  }
+  .image {
+    flex: 0.5; /* Adjust the width of the image area */
+    margin-right: 20px; /* Add margin to separate from the text */
+  }
+  .image img {
+    width: 100%; /* Make sure the image fills its container */
+    display: block; /* Ensure the image doesn't have any default inline spacing */
+  }
   </style>
 <div class="container">
   <div class="text">
