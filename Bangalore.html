@@ -20,12 +20,51 @@
 <div id="toptitle">
 <h1>Karthik C. S.</h1>
 </div>
-  <h2>Food</h2>
-I follow a <a href="http://en.wikipedia.org/wiki/Lacto_vegetarianism">Lacto-Vegetarian</a> diet and make an exception to eggs in baked food such as cakes. <br>
-If you are in the Bangalore City area, then I recommend the restaurants and food places mentioned <a href="http://maps.app.goo.gl/UGWnxVXnF2qpb6bB8">here</a>. <br><br>
-Obviously, my dietary restriction naturally induces a bias in the list of places I recommend.  Nevertheless, I have received good feedback on my recommendations so far.<br>
-Finally, make sure to check out the notes (in the google map) on each of my recommended places, for the specific dishes that I think are great.<br>
+  <style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+  .text {
+    padding: 15px; /* Add some padding for better spacing */
+    flex: 1; /* Allow the text to take the remaining space */
+    text-align: justify;
+  }
+  .image {
+    margin-right: 20px; /* Adjust margin for better spacing */
+    flex: 0 0 auto; /* Prevent the image from stretching */
+  }
+  .image img {
+    width: 25%; /* Make sure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image doesn't have any default inline spacing */
+  }
 
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center items on smaller screens */
+    }
+    .image {
+      margin-right: 0; /* Remove margin on smaller screens */
+      margin-bottom: 20px; /* Add some spacing below the image */
+    }
+  }
+</style>
+
+
+  <h2>Food</h2>
+<div class="container">
+  <div class="text">
+    I follow a <a href="http://en.wikipedia.org/wiki/Lacto_vegetarianism">Lacto-Vegetarian</a> diet and make an exception to eggs in baked food such as cakes. 
+If you are in the Bangalore City area, then I recommend the restaurants and food places mentioned <a href="http://maps.app.goo.gl/UGWnxVXnF2qpb6bB8">here</a>. <br>
+Obviously, my dietary restriction naturally induces a bias in the list of places I recommend.  Nevertheless, I have received good feedback on my recommendations so far.
+Finally, make sure to check out the notes (in the google map) on each of my recommended places, for the specific dishes that I think are great.
+  </div>
+</div>
   
 <h2>General Remarks</h2>
 <a href="https://sites.google.com/site/roeitell/">Roei Tell</a> has generously provided below some guidelines about navigating through Bangalore (and South India at large) that worked well for him. I strongly endorse everything he has written below. I would even go further that I recommend that if you are visiting Bangalore you not only read his guidelines carefully but actually internalize as it will ensure you have a safe, smooth, and fun trip!
