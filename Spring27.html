@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spring 2027: Automata and Computability (UMC 205) | IISc</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; max-width: 920px; margin: 32px auto; padding: 0 22px 60px; color: #222; background: #fff; }
+    nav { font-family: Arial, sans-serif; font-size: 14px; border-bottom: 1px solid #ddd; padding-bottom: 13px; margin-bottom: 26px; }
+    nav a { margin-right: 17px; }
+    a { color: #19548e; }
+    h1 { font-size: 1.9rem; line-height: 1.22; margin: 0 0 12px; }
+    h2 { font-size: 1.35rem; margin: 35px 0 10px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    p { margin: 10px 0; }
+    .meta { margin: 17px 0 25px; }
+    .meta p { margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 21px; font-size: 0.95rem; }
+    th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid #ddd; vertical-align: top; }
+    th { background: #f5f5f5; }
+    .math { margin: 18px 0; padding: 13px 16px; text-align: center; background: #f8f8f8; overflow-x: auto; }
+    .note { color: #555; }
+    @media (max-width: 640px) { body { font-size: 16px; margin-top: 20px; padding: 0 14px 35px; } h1 { font-size: 1.55rem; } th, td { padding: 7px 6px; } }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="https://cskarthikcs.github.io/">Home</a>
+    <a href="https://cskarthikcs.github.io/">Karthik C. S.</a>
+  </nav>
+  <main>
+    <h1>Spring'27: Automata and Computability (UMC 205)</h1>
+    <div class="meta">
+      <p><strong>Institution:</strong> Indian Institute of Science (IISc), Bengaluru</p>
+      <p><strong>Instructor:</strong> Karthik C. S.</p>
+      <p><strong>Class meeting times and room:</strong> To be announced</p>
+      <p><strong>Office hours:</strong> To be announced</p>
+    </div>
+
+    <h2>Grading</h2>
+    <p>Your final grade is computed out of <strong>1000 points</strong>. Midterm I is worth 275 points, Midterm II is worth 325 points, and the final exam is worth 400 points.</p>
+    <p>Your total score is the sum of your adjusted Midterm I, Midterm II, and final exam scores. There are no homework assignments or extra-credit activities for this course.</p>
+
+    <h2>Exam Score Scaling</h2>
+    <p>To account for differences in exam difficulty, the following scaling policy will be applied <strong>separately</strong> to Midterm I, Midterm II, and the final exam.</p>
+    <p>For a given exam, let \(\mu\) and \(\sigma\) be the mean and standard deviation, respectively, of the percentage scores obtained by all students. If your original percentage score is \(x\), then your adjusted percentage score is</p>
+    <div class="math">\[\boxed{y=\min\left\{100,\;\max\left\{x,\;75+12\frac{x-\mu}{\sigma}\right\}\right\}.}\]</div>
+    <p>If \(\sigma=0\), original scores will be retained. This policy uses a reference mean of 75 and standard deviation of 12, but the adjusted scores are not guaranteed to have that mean or standard deviation, because <strong>your score will never be reduced through scaling</strong> and will never exceed 100%.</p>
+    <p>For example, if the exam mean is 60%, the standard deviation is 15 percentage points, and your original score is 50%, your adjusted score is \(75+12(50-60)/15=67\%\). If the formula instead gives a score below your original score, your original score is retained.</p>
+    <p>The adjusted percentage on each exam is converted back into points using that exam's maximum (275, 325, or 400). The three resulting point totals are added, with no further scaling.</p>
+
+    <h2>Final Letter Grades</h2>
+    <p>There is <strong>no final curve</strong>. The following absolute cutoffs apply to your total out of 1000 points:</p>
+    <table>
+      <thead><tr><th>Letter grade</th><th>Required percentage</th><th>Required points</th></tr></thead>
+      <tbody>
+        <tr><td>A+</td><td>90% or more</td><td>900 or more</td></tr>
+        <tr><td>A</td><td>80% to below 90%</td><td>800 to below 900</td></tr>
+        <tr><td>B+</td><td>70% to below 80%</td><td>700 to below 800</td></tr>
+        <tr><td>B</td><td>60% to below 70%</td><td>600 to below 700</td></tr>
+        <tr><td>C</td><td>50% to below 60%</td><td>500 to below 600</td></tr>
+        <tr><td>D</td><td>40% to below 50%</td><td>400 to below 500</td></tr>
+        <tr><td>F</td><td>Below 40%</td><td>Below 400</td></tr>
+      </tbody>
+    </table>
+    <p>Cutoffs are strictly followed. For example, a score of 79.99% earns a B+, not an A. Scores will not be rounded up to meet a grade boundary. There are no extra-credit activities or exceptions to these grading rules.</p>
+
+    <h2>Tentative Topics and Schedule</h2>
+    <p class="note">The sequence below is provisional. Lecture dates and examination dates will be announced after the Spring 2027 timetable is confirmed.</p>
+    <table>
+      <thead><tr><th>Lecture</th><th>Topic</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Introduction, diagonalization, and motivation</td></tr>
+        <tr><td>2</td><td>Finite automata and regular languages</td></tr>
+        <tr><td>3</td><td>Regular operations and nondeterministic finite automata</td></tr>
+        <tr><td>4</td><td>Equivalence of NFAs and DFAs</td></tr>
+        <tr><td>5</td><td>Regular expressions</td></tr>
+        <tr><td>6</td><td>Pumping lemma for regular languages</td></tr>
+        <tr><td>7</td><td>Context-free grammars, ambiguity, and normal forms</td></tr>
+        <tr><td>8</td><td>Review</td></tr>
+        <tr><td>—</td><td><strong>Midterm I (date to be announced)</strong></td></tr>
+        <tr><td>9</td><td>Pushdown automata</td></tr>
+        <tr><td>10</td><td>Equivalence of context-free grammars and pushdown automata</td></tr>
+        <tr><td>11</td><td>Pumping lemma for context-free languages</td></tr>
+        <tr><td>12</td><td>Turing machines and decidability</td></tr>
+        <tr><td>13</td><td>Undecidable problems</td></tr>
+        <tr><td>14</td><td>The halting problem and Rice's theorem</td></tr>
+        <tr><td>15</td><td>Introduction to computational complexity</td></tr>
+        <tr><td>16</td><td>P, NP, and NP-completeness</td></tr>
+        <tr><td>17</td><td>Review</td></tr>
+        <tr><td>—</td><td><strong>Midterm II (date to be announced)</strong></td></tr>
+        <tr><td>18</td><td>Cook–Levin theorem</td></tr>
+        <tr><td>19</td><td>Natural NP-complete problems I</td></tr>
+        <tr><td>20</td><td>Natural NP-complete problems II</td></tr>
+        <tr><td>21</td><td>Natural NP-complete problems III</td></tr>
+        <tr><td>22</td><td>Hardness of approximation I</td></tr>
+        <tr><td>23</td><td>Hardness of approximation II</td></tr>
+        <tr><td>24</td><td>Fine-grained complexity I</td></tr>
+        <tr><td>25</td><td>Fine-grained complexity II</td></tr>
+        <tr><td>26</td><td>Review</td></tr>
+        <tr><td>—</td><td><strong>Final exam (date to be announced)</strong></td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
